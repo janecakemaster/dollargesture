@@ -1,7 +1,6 @@
 #Assignment 3
-**Jane Kim  
-jk3316@columbia.edu
-**
+**Jane Kim**  
+**jk3316@columbia.edu**
 
 ###Instructions
 
