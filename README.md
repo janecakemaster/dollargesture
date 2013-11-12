@@ -1,7 +1,6 @@
 #Assignment 3
-**Jane Kim  
-jk3316@columbia.edu
-**
+**Jane Kim**  
+**jk3316@columbia.edu**
 
 ###Instructions
 
@@ -13,7 +12,7 @@ jk3316@columbia.edu
 
 HTML5 `<video>` application that uses gestures to interact with player
 
-#####gestures to support:
+####gestures to support:
 * play
 * pause
 * seek (i.e. setting `currentTime` attribute)
@@ -21,7 +20,7 @@ HTML5 `<video>` application that uses gestures to interact with player
 * control volume (incl. mute)
 * width & height attributes
 
-#####specs
+####specs
 * hardcode video, no state persistence
 * test in chrome (~30.0)
 * gestures in `<canvas>`, can be anywhere in the window
@@ -32,16 +31,17 @@ HTML5 `<video>` application that uses gestures to interact with player
 * could base your decision about what action to perform on factors such as where a gesture begins or ends, or the direction in which its first or last few points are drawn, in addition to the template match returned by the recognizer.
 * multistroke recognition - use points or timeout; a nice alternative to an explicit trigger to invoke recognition, such as a right mouse click
 
-#####documentation
+####documentation
 * documentation of design
 * explain app development using images of initial sketches/paper prototypes
 * explain what/how application using screenshots
 * justify UI design decisions (usability heuristics)
 
-#####resources
+####resources
 * [$1 Unistroke Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/)
 * [W3 Video Media Events](http://www.w3.org/2010/05/video/mediaevents.html)
 * [Original assignment](http://graphics.cs.columbia.edu/courses/csw4170/assn3-13f.htm)
+* [$P paper](http://faculty.washington.edu/wobbrock/pubs/icmi-12.pdf)
 
 ###submit `jk3316_assn3.zip`
 * documentation [pdf]
