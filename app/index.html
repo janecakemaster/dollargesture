@@ -2,25 +2,70 @@
 <html lang="en">
 <head>
 
-	<meta charset="utf-8">
-	<title>$1 Gesture Video Player</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta charset="utf-8">
+  <title>$1 Gesture Video Player</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
-	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-	<div class="grid-container">
-		<div class="grid-50 video-container">
-			<video poster="img/poster.png" controls src="chrome.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-		</div>
-		<div class="grid-50 gesture">
-			<p>This is the gesture area</p>
-		</div>
-	</div>
+  <div class="grid-container">
+    <div class="grid-50 videoContainer">
+      <video poster="img/poster.png" controls src="chrome.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+    </div>
+    <div class="grid-50 gestureContainer">
+      <div class="gestureArea">
+        <p>Draw gestures here</p>
+      </div>
+    </div>
+
+
+    <div class="legend">
+      <h2>Video Control Gestures</h2>
+      <div class="gesture">
+        <figure>
+          <img src="img/playback.png" alt="Playback control gestures">
+          <figcaption>Play/Stop</figcaption>
+        </figure>
+      </div>
+      <div class="gesture" id="size">
+        <figure>
+          <img src="img/size.png" alt="Screen size control gestures">
+          <figcaption>Increase/Decrease Video Size</figcaption>
+        </figure>
+      </div>
+      <div class="gesture">
+        <figure>
+          <img src="img/time.png" alt="Playback position control gestures">
+          <figcaption>Rewind/Fast Forward</figcaption>
+        </figure>
+      </div>
+      <div class="gesture">
+        <figure>
+          <img src="img/speed.png" alt="Playback speed control gestures">
+          <figcaption>Slow Down/Speed Up</figcaption>
+        </figure>
+      </div>
+      <div class="gesture">
+        <figure>
+          <img src="img/mute.png" alt="Mute gesture">
+          <figcaption>Mute</figcaption>
+        </figure>
+      </div>
+      <div class="gesture">
+        <figure>
+          <img src="img/volume.png" alt="Volume control gestures">
+          <figcaption>Volume Up/Down</figcaption>
+        </figure>
+      </div>
+    </div>
+
+
+  </div>
 
 </body>
 </html>
