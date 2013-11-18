@@ -1,5 +1,5 @@
 #Assignment 3
-**Jane Kim**  
+**Jane Kim**
 **jk3316@columbia.edu**
 
 ###Instructions
@@ -11,6 +11,10 @@
 ###Justification
 
 HTML5 `<video>` application that uses gestures to interact with player
+
+###Attribution
+* video from [HTML5 Rocks](http://www.html5rocks.com/en/tutorials/video/basics/)
+* Resources used: [HTML5 Rocks](http://www.html5rocks.com/en/tutorials/video/basics/),
 
 ####gestures to support:
 * play
@@ -27,7 +31,7 @@ HTML5 `<video>` application that uses gestures to interact with player
 * use lo-fi prototyping techniques
 * using heuristics and shit
 * the precision with which you allow the user to determine the value of an attribute, and whether it is set to an absolute value or modified relative to its current value.
-* You can compute your own information about a gesture while you are accumulating a stroke to send to the recognizer, or after you have accumulated the stroke, or even after you have performed gesture recognition.  
+* You can compute your own information about a gesture while you are accumulating a stroke to send to the recognizer, or after you have accumulated the stroke, or even after you have performed gesture recognition.
 * could base your decision about what action to perform on factors such as where a gesture begins or ends, or the direction in which its first or last few points are drawn, in addition to the template match returned by the recognizer.
 * multistroke recognition - use points or timeout; a nice alternative to an explicit trigger to invoke recognition, such as a right mouse click
 
