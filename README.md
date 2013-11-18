@@ -1,21 +1,58 @@
 #Assignment 3
+
 **Jane Kim**
 **jk3316@columbia.edu**
 
-###Instructions
+##Instructions
 
-###Design
+##Design
+For the original wireframe, visit the [UXPin](http://app.uxpin.com/2dbad5b0f5e911d61e5d8e67ece4a404c4a43376/4634561).
 
-###Development
+###Overall Design
+![image](design/screenshots/overall.png)
 
-###Justification
+![image](design/screenshots/responsiveness.png)
+
+###Gesture Area
+![image](design/screenshots/gesture.png)
+
+![image](design/screenshots/gesture_c.png)
+
+###Player
+![image](design/screenshots/player_overlay.png)
+
+![image](design/screenshots/progress.png)
+
+![image](design/screenshots/volume.png)
+
+###Help/Documentation
+![image](design/screenshots/info.png)
+
+![image](design/screenshots/info_c.png)
+
+![image](design/screenshots/expanded.png)
+
+![image](design/screenshots/key_c.png)
+
+
+##Development
+
+##Justification
 
 HTML5 `<video>` application that uses gestures to interact with player
 
-###Attribution
+##Attribution
 * video from [HTML5 Rocks](http://www.html5rocks.com/en/tutorials/video/basics/)
 * Resources used: [HTML5 Rocks](http://www.html5rocks.com/en/tutorials/video/basics/),
 
+##resources
+* [$1 Unistroke Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/)
+* [W3 Video Media Events](http://www.w3.org/2010/05/video/mediaevents.html)
+* [Original assignment](http://graphics.cs.columbia.edu/courses/csw4170/assn3-13f.htm)
+* [$P paper](http://faculty.washington.edu/wobbrock/pubs/icmi-12.pdf)
+
+
+#Notes
 ####gestures to support:
 * play
 * pause
@@ -41,11 +78,6 @@ HTML5 `<video>` application that uses gestures to interact with player
 * explain what/how application using screenshots
 * justify UI design decisions (usability heuristics)
 
-####resources
-* [$1 Unistroke Recognizer](http://depts.washington.edu/aimgroup/proj/dollar/)
-* [W3 Video Media Events](http://www.w3.org/2010/05/video/mediaevents.html)
-* [Original assignment](http://graphics.cs.columbia.edu/courses/csw4170/assn3-13f.htm)
-* [$P paper](http://faculty.washington.edu/wobbrock/pubs/icmi-12.pdf)
 
 ###submit `jk3316_assn3.zip`
 * documentation [pdf]
