@@ -1,59 +1,26 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 
-	<!-- Basic Page Needs
-	================================================== -->
 	<meta charset="utf-8">
 	<title>$1 Gesture Video Player</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<!-- Mobile Specific Metas
-	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-	================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
-	<link rel="stylesheet" href="stylesheets/style.css">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-
-
-	<!-- Primary Page Layout
-	================================================== -->
-
-	<!-- Delete everything in this .container and get started on your own site! -->
-
-	<div class="container">
-		<div class="video-container">
-			<video poster="images/poster.png" controls>
-				<source src="chrome.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
-			</video>
+	<div class="grid-container">
+		<div class="grid-50 video-container">
+			<video poster="img/poster.png" controls src="chrome.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
 		</div>
-	</div><!-- container -->
+		<div class="grid-50 gesture">
+			<p>This is the gesture area</p>
+		</div>
+	</div>
 
-
-<!-- End Document
-	================================================== -->
 </body>
 </html>
