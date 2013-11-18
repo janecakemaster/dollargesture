@@ -9,30 +9,30 @@
 For the original wireframe, visit the [UXPin](http://app.uxpin.com/2dbad5b0f5e911d61e5d8e67ece4a404c4a43376/4634561).
 
 ###Overall Design
-![image](design/screenshots/overall.png)
+![image](screenshots/overall.png)
 
-![image](design/screenshots/responsiveness.png)
+![image](screenshots/responsiveness.png)
 
 ###Gesture Area
-![image](design/screenshots/gesture.png)
+![image](screenshots/gesture.png)
 
-![image](design/screenshots/gesture_c.png)
+![image](screenshots/gesture_c.png)
 
 ###Player
-![image](design/screenshots/player_overlay.png)
+![image](screenshots/player_overlay.png)
 
-![image](design/screenshots/progress.png)
+![image](screenshots/progress.png)
 
-![image](design/screenshots/volume.png)
+![image](screenshots/volume.png)
 
 ###Help/Documentation
-![image](design/screenshots/info.png)
+![image](screenshots/info.png)
 
-![image](design/screenshots/info_c.png)
+![image](screenshots/info_c.png)
 
-![image](design/screenshots/expanded.png)
+![image](screenshots/expanded.png)
 
-![image](design/screenshots/key_c.png)
+![image](screenshots/key_c.png)
 
 
 ##Development
