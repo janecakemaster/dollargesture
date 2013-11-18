@@ -1,12 +1,17 @@
+body, figure, figcaption, p {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: #000;
   font-size: 16px;
   font-family: Arial, sans-serif;
 }
 
-figure, figcaption, p {
-  margin: 0;
-  padding: 0;
+.grid-container {
+    margin: 50px 10px 90px 10px;
+
 }
 
 .videoContainer {
@@ -58,10 +63,46 @@ h2 {
 
 .gesture {
   display: inline-block;
-  padding: 0.7em;
+  padding: 0.6em;
+}
+
+.gesture img {
+  height: 75px;
 }
 
 figcaption {
   text-align: center;
   font-size: 1em;
+}
+
+footer {
+  position: absolute;
+  bottom:  0;
+  overflow: hidden;
+  margin-top:  50px;
+  padding:  20px;
+  width:  50%;
+  height: auto;
+  background: #ccc;
+}
+
+.footer {
+  display: inline-block;
+  float: left;
+  line-height: 2.5;
+}
+
+.help {
+  display: inline-block;
+  float: right;
+}
+
+.expanded {
+  display: none;
+  /*display: inline-block;*/
+  padding: 1em 0;
+}
+
+.expand {
+  height: auto;
 }
