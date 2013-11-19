@@ -19,18 +19,23 @@
       <video poster="img/poster.png" controls src="chrome.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
     </div>
     <div class="grid-50 gestureContainer">
-      <div class="gestureArea">
-        <p>Draw gestures here</p>
-      </div>
+      <canvas id="myCanvas" height="300" width="400" onmousedown="mouseDownEvent(event.clientX, event.clientY)" onmousemove="mouseMoveEvent(event.clientX, event.clientY)" onmouseup="mouseUpEvent(event.clientX, event.clientY)" oncontextmenu="return false;">
+        <span style="background-color:#ffff88;">The &lt;canvas&gt; element is not supported by this browser.</span>
+      </canvas>
     </div>
-
 
     <div class="legend">
       <h2>Video Control Gestures</h2>
       <div class="gesture">
         <figure>
-          <img src="img/playback.png" alt="Playback control gestures">
-          <figcaption>Play/Stop</figcaption>
+          <img id="play" src="img/shapes/triangle.png" alt="Play gesture">
+          <figcaption>Play</figcaption>
+        </figure>
+      </div>
+      <div class="gesture">
+        <figure>
+          <img src="img/shapes/x.png" alt="Pause gesture">
+          <figcaption>Pause</figcaption>
         </figure>
       </div>
       <div class="gesture" id="size">
@@ -81,6 +86,7 @@
 
   </footer>
 
+  <script src="js/dollar.js"></script>
   <script src="js/app.js"></script>
 
 
