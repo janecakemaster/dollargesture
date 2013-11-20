@@ -17,46 +17,47 @@ a:hover {
   opacity: 1;
 }
 
-.grid-container {
-    margin-top: 50px;
-    margin-bottom: 100px;
+#container {
+  margin: 0 10px;
+  text-align: center;
 }
 
-.videoContainer {
+#videoContainer {
   display: inline-block;
-  margin-bottom:  3em;
+  margin: 30px 20px;
+  margin-bottom: 3em;
   text-align: center;
 }
 
 video {
-  width: 100%;
   height: auto;
   border: 1px solid black;
 }
 
-.gestureContainer {
-  margin-bottom: 3em;
+#gestureContainer {
+  display: inline-block;
+  margin: 30px 20px;
 }
 
 canvas {
+  padding: 10px;
+  min-width: 400px;
   width: auto;
   height: auto;
   border: 1px solid #000;
   border-radius: 15px;
   background: #7a9fbf;
   text-align: center;
-  min-width:  400px;
-  padding:  10px;
 }
 
 .legend {
   clear: both;
-  margin:  0 auto;
+  margin: 0 auto;
   padding: 0 1em;
+  min-width: 580px;
   width: 97%;
   border: 1px solid #DBDBDB;
-  border-radius:  10px;
-  min-width:  580px;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -84,9 +85,9 @@ figcaption {
 
 footer {
   position: fixed;
-  bottom:  0;
+  bottom: 0;
   overflow: hidden;
-  margin-top:  50px;
+  margin-top: 50px;
   padding: 10px 20px;
   min-width: 420px;
   width: 50%;

@@ -7,18 +7,19 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
+  <!-- <link rel="stylesheet" href="css/unsemantic-grid-responsive.css"> -->
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-  <div class="grid-container">
-    <div class="grid-50 videoContainer">
-      <video poster="img/poster.png" controls src="chrome.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  <div id="container">
+    <div id="videoContainer">
+      <video poster="http://www.html5rocks.com/en/tutorials/video/basics/star.png" controls="" id="vid" width="500">
+        <source src="chrome.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+      </video>
     </div>
-    <div class="grid-50 gestureContainer">
+    <div id="gestureContainer">
       <canvas id="myCanvas" height="300" width="400" onmousedown="mouseDownEvent(event.clientX, event.clientY)" onmousemove="mouseMoveEvent(event.clientX, event.clientY)" onmouseup="mouseUpEvent(event.clientX, event.clientY)" oncontextmenu="return false;">
         <span style="background-color:#ffff88;">The &lt;canvas&gt; element is not supported by this browser.</span>
       </canvas>
@@ -86,6 +87,7 @@
 
   </footer>
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="js/dollar.js"></script>
   <script src="js/app.js"></script>
 
