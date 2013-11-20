@@ -92,14 +92,14 @@ function videoControl(str) {
       $('#volume').toggleClass('outline');
       video.muted = false;
       if (volume === 1)
-        break;
+        video.volume = 1;
       else
         volume = video.volume += 0.2;
       break;
     case "volume down":
       $('#volume').toggleClass('outline');
       if (volume === 0)
-        break;
+        video.volume = 0;
       else {
         video.muted = false;
         volume = video.volume -= 0.2;
