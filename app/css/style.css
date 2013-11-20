@@ -58,6 +58,7 @@ canvas {
 .legend {
   clear: both;
   margin: 0 auto;
+  margin-bottom:  100px;
   padding: 0 1em;
   min-width: 580px;
   width: 100%;
@@ -73,6 +74,10 @@ h2 {
 .gesture {
   display: inline-block;
   padding: 0.6em;
+}
+
+.outline {
+  border: 1px solid #ccc;
 }
 
 .gesture img {
@@ -107,8 +112,9 @@ footer {
 }
 
 .help {
-  display: inline-block;
+  display: inline;
   float: right;
+  margin-top: 10px;
 }
 
 .expanded {

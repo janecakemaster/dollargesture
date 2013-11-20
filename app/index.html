@@ -7,7 +7,6 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- <link rel="stylesheet" href="css/unsemantic-grid-responsive.css"> -->
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -15,8 +14,8 @@
 
   <div id="container">
     <div id="videoContainer" title="video player">
-      <video poster="http://www.html5rocks.com/en/tutorials/video/basics/star.png" controls="" id="vid" width="500">
-        <source src="chrome.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+      <video poster="img/cover.png" controls="" id="vid" width="600">
+        <source src="elephants-dream.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
       </video>
     </div>
     <div id="gestureContainer" title="gesture area">
@@ -27,13 +26,13 @@
 
     <div class="legend" title="Gesture Legend">
       <h2>Video Control Gestures</h2>
-      <div class="gesture">
+      <div class="gesture" id="play">
         <figure>
           <img id="play" src="img/shapes/triangle.png" title="Play gesture" alt="Play gesture">
           <figcaption>Play</figcaption>
         </figure>
       </div>
-      <div class="gesture">
+      <div class="gesture" id="pause">
         <figure>
           <img src="img/shapes/x.png" title="Pause gesture" alt="Pause gesture">
           <figcaption>Pause</figcaption>
@@ -45,25 +44,25 @@
           <figcaption>Increase/Decrease Video Size</figcaption>
         </figure>
       </div>
-      <div class="gesture">
+      <div class="gesture" id="position">
         <figure>
           <img src="img/time2.png" title="Playback position control gestures" alt="Playback position control gestures">
           <figcaption>Rewind/Fast Forward</figcaption>
         </figure>
       </div>
-      <div class="gesture">
+      <div class="gesture" id="speed">
         <figure>
           <img src="img/speed2.png" title="Playback speed control gestures" alt="Playback speed control gestures">
           <figcaption>Slow Down/Speed Up</figcaption>
         </figure>
       </div>
-      <div class="gesture">
+      <div class="gesture" id="mute">
         <figure>
           <img src="img/mute.png" title="Mute gesture" alt="Mute gesture">
           <figcaption>Mute</figcaption>
         </figure>
       </div>
-      <div class="gesture">
+      <div class="gesture" id="volume">
         <figure>
           <img src="img/volume.png" title="Volume control gestures" alt="Volume control gestures">
           <figcaption>Volume Up/Down</figcaption>
@@ -78,13 +77,13 @@
       <p>This is an HTML5 video player that uses gestures as controls.</p>
       <p><b>Usage</b>: In the blue box (gesture area), draw the gesture corresponding to the action you want to execute.</p>
       <p>"Rewind/Fast Forward" changes the current position in video by 15 seconds or 5% of the duration of the video. <br>"Slow Down/Speed Up" supports speeds from 0.5x to 5x. <br>Changing the volume unmutes the video. <br>Minimum player width is 200px.g</p>
-      <p>Click the ? icon to hide this information.</p>
+      <p>Click the <img src="img/help.png" title="Question Mark" alt="question mark"/> icon to hide this information.</p>
     </div>
     <div class="footer">
       <p>$1 gesture player by <a href="http://janekim.me">Jane Kim</a> | <a href="https://github.com/janecakemaster/dollargesture">Fork me on GitHub</a></p>
     </div>
     <div class="help">
-      <a href="#"><img src="img/help.png" title="Click for help and more info"/></a>
+      <a href="#"><img src="img/help.png" title="Click for help and more info" alt="Click for help and more info"/></a>
     </div>
 
   </footer>

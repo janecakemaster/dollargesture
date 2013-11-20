@@ -1,7 +1,7 @@
 $(document).ready(function(){
   onLoadEvent();
-  $(".expanded").toggle("fast").delay(4000);
-  $(".expanded").toggle("fast");
+  $(".expanded").show("fast").delay(4000);
+  $(".expanded").hide("fast");
 });
 
 $('video').resize(function() {
@@ -70,21 +70,26 @@ function resetCanvas() {
 }
 
 function videoControl(str) {
+  $('.outline').toggleClass('outline');
   switch(str) {
     case "play":
+      $('#play').toggleClass('outline');
       video.play();
-      // overlay
       break;
     case "pause":
+      $('#pause').toggleClass('outline');
       video.pause();
       break;
     case "decrease screen size":
+      $('#size').toggleClass('outline');
       changeScreenSize(false);
       break;
     case "increase screen size":
+      $('#size').toggleClass('outline');
       changeScreenSize(true);
       break;
     case "volume up":
+      $('#volume').toggleClass('outline');
       video.muted = false;
       if (volume === 1)
         break;
@@ -92,6 +97,7 @@ function videoControl(str) {
         volume = video.volume += 0.2;
       break;
     case "volume down":
+      $('#volume').toggleClass('outline');
       if (volume === 0)
         break;
       else {
@@ -100,6 +106,7 @@ function videoControl(str) {
       }
       break;
     case "rewind":
+      $('#position').toggleClass('outline');
       currTime = video.currentTime - timeChunk;
       if (currTime <= 0)
         currTime = video.currentTime = 0;
@@ -107,6 +114,7 @@ function videoControl(str) {
         video.currentTime = currTime;
       break;
     case "fast forward":
+      $('#position').toggleClass('outline');
       currTime = video.currentTime + timeChunk;
       if (currTime >= duration)
         currTime = video.currentTime = duration;
@@ -114,6 +122,7 @@ function videoControl(str) {
         video.currentTime = currTime;
       break;
     case "speed up":
+      $('#speed').toggleClass('outline');
       if (speed >= 5)
         speed = video.playbackRate = 5;
       else
@@ -121,6 +130,7 @@ function videoControl(str) {
       console.log(video.playbackRate);
       break;
     case "slow down":
+      $('#speed').toggleClass('outline');
       if (speed <= 0.5)
         speed = video.playbackRate = 0.5;
       else
@@ -128,6 +138,7 @@ function videoControl(str) {
       console.log(video.playbackRate);
       break;
     case "mute":
+      $('#mute').toggleClass('outline');
       video.muted = true;
       break;
     default:
