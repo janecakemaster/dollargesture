@@ -14,12 +14,12 @@
 <body>
 
   <div id="container">
-    <div id="videoContainer">
+    <div id="videoContainer" title="video player">
       <video poster="http://www.html5rocks.com/en/tutorials/video/basics/star.png" controls="" id="vid" width="500">
         <source src="chrome.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
       </video>
     </div>
-    <div id="gestureContainer">
+    <div id="gestureContainer" title="gesture area">
       <canvas id="myCanvas" height="300" width="400" onmousedown="mouseDownEvent(event.clientX, event.clientY)" onmousemove="mouseMoveEvent(event.clientX, event.clientY)" onmouseup="mouseUpEvent(event.clientX, event.clientY)" oncontextmenu="return false;">
         <span style="background-color:#ffff88;">The &lt;canvas&gt; element is not supported by this browser.</span>
       </canvas>
@@ -29,43 +29,43 @@
       <h2>Video Control Gestures</h2>
       <div class="gesture">
         <figure>
-          <img id="play" src="img/shapes/triangle.png" alt="Play gesture">
+          <img id="play" src="img/shapes/triangle.png" title="Play gesture" alt="Play gesture">
           <figcaption>Play</figcaption>
         </figure>
       </div>
       <div class="gesture">
         <figure>
-          <img src="img/shapes/x.png" alt="Pause gesture">
+          <img src="img/shapes/x.png" title="Pause gesture" alt="Pause gesture">
           <figcaption>Pause</figcaption>
         </figure>
       </div>
       <div class="gesture" id="size">
         <figure>
-          <img src="img/size.png" alt="Screen size control gestures">
+          <img src="img/size.png" title="Screen size control gestures" alt="Screen size control gestures">
           <figcaption>Increase/Decrease Video Size</figcaption>
         </figure>
       </div>
       <div class="gesture">
         <figure>
-          <img src="img/time2.png" alt="Playback position control gestures">
+          <img src="img/time2.png" title="Playback position control gestures" alt="Playback position control gestures">
           <figcaption>Rewind/Fast Forward</figcaption>
         </figure>
       </div>
       <div class="gesture">
         <figure>
-          <img src="img/speed2.png" alt="Playback speed control gestures">
+          <img src="img/speed2.png" title="Playback speed control gestures" alt="Playback speed control gestures">
           <figcaption>Slow Down/Speed Up</figcaption>
         </figure>
       </div>
       <div class="gesture">
         <figure>
-          <img src="img/mute.png" alt="Mute gesture">
+          <img src="img/mute.png" title="Mute gesture" alt="Mute gesture">
           <figcaption>Mute</figcaption>
         </figure>
       </div>
       <div class="gesture">
         <figure>
-          <img src="img/volume.png" alt="Volume control gestures">
+          <img src="img/volume.png" title="Volume control gestures" alt="Volume control gestures">
           <figcaption>Volume Up/Down</figcaption>
         </figure>
       </div>
@@ -74,9 +74,9 @@
   </div>
 
   <footer>
-    <div class="expanded">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. Aliquam erat volutpat. Donec placerat nisl magna, et faucibus arcu condimentum sed.</p>
+    <div class="expanded" title="Help and info">
+      <p>This is an HTML5 video player that uses gestures as controls.</p>
+      <p><b>Usage</b>: In the blue box (gesture area), draw the gesture corresponding to the action you want to execute.</p>
     </div>
     <div class="footer">
       <p>$1 gesture player by <a href="http://janekim.me">Jane Kim</a> | Fork me on <a href="https://github.com/janecakemaster/dollargesture">GitHub</a></p>

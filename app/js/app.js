@@ -6,6 +6,12 @@ $('video').resize(function() {
 
 var video = document.getElementById("vid");
 var canvas = document.getElementById('myCanvas');
+canvas.addEventListener("mouseover", function() {
+  drawText("Draw gesture here");
+});
+canvas.addEventListener("mouseout", function() {
+  drawText("");
+});
 var duration, currTime, volume, speed, timeChunk;
 
 var timerId = window.setInterval(function(t){
@@ -202,11 +208,11 @@ function mouseUpEvent(x, y) {
       var name = result.Name;
       drawText(name);
       videoControl(name);
+      resetCanvas();
     }
     else // fewer than 10 points were inputted
       drawText("Try again");
   }
-  resetCanvas();
 }
 
 function drawText(str) {
