@@ -1,15 +1,27 @@
-$(document).ready(onLoadEvent).delay(1000);
+$(document).ready(onLoadEvent);
+
+$('video').resize(function() {
+  resetCanvas();
+});
 
 var video = document.getElementById("vid");
 var canvas = document.getElementById('myCanvas');
-var duration = video.duration;
-var currTime = video.currentTime;
-var timeChunk = duration / 20;
-if (timeChunk > 15)
-  timeChunk = 15;
-var vidSize = video.width;
-var top = 0;
-var left = 0;
+var duration, currTime, volume, speed, timeChunk;
+
+var timerId = window.setInterval(function(t){
+  if (video.readyState > 0) {
+    duration = video.duration;
+    currTime = video.currentTime;
+    timeChunk = duration / 20;
+    if (timeChunk < 15)
+      timeChunk = 15;
+    volume = video.volume;
+    speed = video.playbackRate;
+    resetCanvas();
+    clearInterval(timerId);
+  }
+}, 100);
+
 
 if( video.hasAttribute("controls") ){
   //removes controls programmatically because of chrome screen resize problem
@@ -23,7 +35,8 @@ $(".help").on("click", function() {
 var _isDown, _points, _r, _g, _rc;
 
 function onLoadEvent() {
-  console.log("loading");
+  vidSize = video.width;
+
   _points = new Array();
   _r = new DollarRecognizer();
 
@@ -33,8 +46,12 @@ function onLoadEvent() {
   _g.fillStyle = "#000";
   _g.strokeStyle = "#000";
   _g.lineWidth = 3;
-  _g.font = "16px Arial";
 
+  resetCanvas();
+}
+
+function resetCanvas() {
+  _g = canvas.getContext('2d');
   _rc = getCanvasRect(canvas); // canvas rect on page
   _g.fillStyle = "#7a9fbf";
   _g.fillRect(0, 0, _rc.width, 20);
@@ -59,23 +76,46 @@ function videoControl(str) {
       break;
     case "volume up":
       video.muted = false;
-      video.pause();
+      if (volume === 1)
+        break;
+      else
+        volume = video.volume += 0.2;
       break;
     case "volume down":
-      video.muted = false;
-      video.pause();
+      if (volume === 0)
+        break;
+      else {
+        video.muted = false;
+        volume = video.volume -= 0.2;
+      }
       break;
     case "rewind":
-      video.pause();
+      currTime = video.currentTime - timeChunk;
+      if (currTime <= 0)
+        currTime = video.currentTime = 0;
+      else
+        video.currentTime = currTime;
       break;
     case "fast forward":
-      video.pause();
+      currTime = video.currentTime + timeChunk;
+      if (currTime >= duration)
+        currTime = video.currentTime = duration;
+      else
+        video.currentTime = currTime;
       break;
     case "speed up":
-      video.pause();
+      if (speed >= 5)
+        speed = video.playbackRate = 5;
+      else
+        speed = video.playbackRate += 0.5;
+      console.log(video.playbackRate);
       break;
     case "slow down":
-      video.pause();
+      if (speed <= 0.5)
+        speed = video.playbackRate = 0.5;
+      else
+        speed = video.playbackRate -= 0.5;
+      console.log(video.playbackRate);
       break;
     case "mute":
       video.muted = true;
@@ -83,7 +123,6 @@ function videoControl(str) {
     default:
       console.log("invalid control");
   }
-  _rc = getCanvasRect(canvas); // canvas rect on page
 }
 
 function changeScreenSize(sign) {
@@ -91,16 +130,14 @@ function changeScreenSize(sign) {
   if(sign) {
     if(vidSize === screenSize)
       return;
-    else {
+    else
       vidSize += 50;
-    }
   }
   else {
     if(vidSize === 200)
       return;
-    else {
+    else
       vidSize -= 50;
-    }
   }
   video.width = vidSize;
 }
@@ -117,7 +154,6 @@ function getCanvasRect(canvas) {
     cx += canvas.offsetLeft;
     cy += canvas.offsetTop;
   }
-
   return {x: cx, y: cy, width: w, height: h};
 }
 
@@ -143,8 +179,6 @@ function mouseDownEvent(x, y) {
 
   _points.length = 1; // clear
   _points[0] = new Point(x, y);
-  drawText("Draw gesture here");
-  _g.fillRect(x - 4, y - 3, 9, 9);
 }
 
 function mouseMoveEvent(x, y) {
@@ -170,16 +204,17 @@ function mouseUpEvent(x, y) {
       videoControl(name);
     }
     else // fewer than 10 points were inputted
-      drawText("Too few points made. Please try again.");
+      drawText("Try again");
   }
+  resetCanvas();
 }
 
 function drawText(str) {
+  _g.font = "16px Arial";
   _g.fillStyle = "#7a9fbf";
   _g.fillRect(0, 0, _rc.width, 20);
   _g.fillStyle = "#000";
   _g.fillText(str, 1, 14);
-  _g.font = "bold";
 }
 
 function drawConnectedPoint(from, to) {
@@ -195,4 +230,3 @@ function round(n, d) {
   d = Math.pow(10, d);
   return Math.round(n * d) / d
 }
-
