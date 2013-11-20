@@ -1,4 +1,8 @@
-$(document).ready(onLoadEvent);
+$(document).ready(function(){
+  onLoadEvent();
+  $(".expanded").toggle("fast").delay(4000);
+  $(".expanded").toggle("fast");
+});
 
 $('video').resize(function() {
   resetCanvas();
